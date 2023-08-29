@@ -1,4 +1,3 @@
-import { CarrinhoContext, CarrinhoProvider } from 'common/contexts/Carrinho'
 import { UsuarioProvider } from 'common/contexts/Usuario'
 import Carrinho from 'pages/Carrinho'
 import Feira from 'pages/Feira'
@@ -16,18 +15,14 @@ export default function MyRoutes() {
                         <Login />
                     </Route>
                     
-                    <CarrinhoProvider>
                         <Route exact path="/feira">
                             <Feira />
                         </Route>
-                        </CarrinhoProvider>
                 </UsuarioProvider>
 
-                <CarrinhoProvider>
                 <Route exact path="/carrinho">
                     <Carrinho />
                 </Route>
-                </CarrinhoProvider>
         
         </Switch>
         </BrowserRouter >
