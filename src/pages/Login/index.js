@@ -14,7 +14,7 @@ import { UsuarioContext } from 'common/contexts/Usuario';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom';
 
 function Login() {
-  const {setNome,setSaldo}=useContext(UsuarioContext);
+  const {nome,saldo,setNome,setSaldo}=useContext(UsuarioContext);
   const history=useHistory();
   return (
     <Container>
@@ -48,6 +48,7 @@ function Login() {
         variant="contained"
         color="primary"
         onClick={()=>history.push('/feira')}
+        disabled={nome.length<4 || saldo<=0 }
       >
         Avançar
       </Button>

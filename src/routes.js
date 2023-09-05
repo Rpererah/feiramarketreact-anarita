@@ -19,14 +19,14 @@ export default function MyRoutes() {
                         <Route exact path="/feira">
                             <Feira />
                         </Route>
-                    </CarrinhoProvider>
-                </UsuarioProvider>
+                    
 
-                <CarrinhoProvider>
+               
                 <Route exact path="/carrinho">
                     <Carrinho />
                 </Route>
                 </CarrinhoProvider>
+                </UsuarioProvider>
         
         </Switch>
         </BrowserRouter >
